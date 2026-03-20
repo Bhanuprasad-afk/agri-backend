@@ -1,24 +1,14 @@
 package com.agriSmart.service;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.agriSmart.model.User;
-import com.agriSmart.repository.UserRepository;
+import java.util.*;
 
 @Service
 public class UserService {
 
-    @Autowired
-    private UserRepository repo;
-
-    public List<User> getAllUsers() {
-        return repo.findAll();
-    }
-
-    public User saveUser(User user) {
-        return repo.save(user);
+    public List<String> getUsers() {
+        List<String> users = new ArrayList<>();
+        users.add("Ravi - 9876543210 - Andhra Pradesh");
+        return users;
     }
 }
